@@ -12,20 +12,62 @@
 
 <body>
     <script language="javascript">
-	$.get( "https://federico-sorcini.github.io/JSON_SongList/Songlist.json", 
-		  function( data ) {
-			str = JSON.stringify(data);
-		strHTML= "<ul>";
-		data.forEach(function(song) { 
-		strHTML += "<li>" 
-			    + song.song + "<br><br>" 
-				+ song.artist + "<br><br>"
-                + song.genre + "<br><br>"
-                + song.year + "<br><br><br>" + "</li>";
-			}) 
-	strHTML += "</ul>";
-	document.write (strHTML);  /**/
-	})
-</script>
+    $.get( "https://federico-sorcini.github.io/JSON_SongList/Songlist.json", 
+    function( data ) 
+        {
+            str = JSON.stringify(data);
+            document.write("Part 2: " + "<br>");
+            document.write(str +"<br/><br>");
+            document.write("Part 3: " + "<br>");
+            strHTML= "<ul>";
+            data.forEach(function(song) 
+            { 
+                strHTML += "<li>" 
+                + song.song + "<br>" 
+                + "Artist: " + song.artist + "<br>"
+                + "Genre: " + song.genre + "<br>"
+                + "Year: " + song.year + "<br><br>" + "</li>";
+            }) 
+            strHTML += "</ul>";
+            document.write(strHTML + "<br><br>");
+            document.write("Part 4: " + "<br>");
+        })
+    function filterFunction()
+        {
+            g = document.getElementById("select1").value;
+            $.get( "https://federico-sorcini.github.io/JSON_SongList/Songlist.json", 
+            function( data2 ) 
+                {
+                    str2 = JSON.stringify(data2);
+                    strHTML2= "<ul>";
+                    data2.forEach(function(song) 
+                    { 
+                        if (g == song.genre)
+                        {
+                            strHTML2 += "<li>" 
+                            + song.song + "<br>" 
+                            + "Artist: " + song.artist + "<br>"
+                            + "Genre: " + song.genre + "<br>"
+                            + "Year: " + song.year + "<br><br>" + "</li>";
+                        }
+                        else 
+                        {
+                            continue;
+                        }
+                    }) 
+                    strHTML2 += "</ul>";
+                    document.write(strHTML2);
+                })
+        }
+    </script>
+    <form>
+        Select a Genre to filter the songs by: 
+    	<select name="select1" id="select1" size='1'>
+    	    <option value="classics"> Classics </option>
+    	    <option value="pop"> Pop </option>
+    	    <option value="rock"> Rock </option>
+        </select>
+        <input type="button" onclick="filterFunction()">
+	</form>
 </body>
 </html>
