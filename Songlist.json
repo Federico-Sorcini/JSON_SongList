@@ -1,0 +1,93 @@
+[
+    {
+        "number": "1",
+        "song": "Ain't That a Kick in the Head",
+        "artist": "Dean Martin",
+        "genre": "Classics",
+        "year": "1960"
+    },
+    {
+        "number": "2",
+        "song": "It Ain't Me",
+        "artist": "Selena Gomez",
+        "genre": "Pop",
+        "year": "2017"
+    },
+    {
+        "number": "3",
+        "song": "Scenes From an Italian Restaurant",
+        "artist": "Billy Joel",
+        "genre": "Classics",
+        "year": "1977"
+    },
+    {
+        "number": "4",
+        "song": "Back in Black",
+        "artist": "AC/DC",
+        "genre": "Rock",
+        "year": "1980"
+    },
+    {
+        "number": "5",
+        "song": "Runaround Sue",
+        "artist": "Dion DiMucci",
+        "genre": "Classics",
+        "year": "1961"
+    },
+    {
+        "number": "6",
+        "song": "Young Dumb & Broke",
+        "artist": "Khalid",
+        "genre": "Pop",
+        "year": "2017"
+    },
+    {
+        "number": "7",
+        "song": "The Show Goes On",
+        "artist": "Lupe Fiasco",
+        "genre": "Pop",
+        "year": "2010"
+    },
+    {
+        "number": "8",
+        "song": "Baba O'Riley",
+        "artist": "The Who",
+        "genre": "Rock",
+        "year": "1971"
+    },
+    {
+        "number": "9",
+        "song": "All My Friends",
+        "artist": "Snakeships",
+        "genre": "Pop",
+        "year": "2015"
+    },
+    {
+        "number": "10",
+        "song": "Glory Days",
+        "artist": "Bruce Springsteen",
+        "genre": "Rock",
+        "year": "1985"
+    },
+    {
+        "number": "11",
+        "song": "Sultans of Swing",
+        "artist": "Dire Straits",
+        "genre": "Rock",
+        "year": "1977"
+    },
+    {
+        "number": "12",
+        "song": "Fire Burning",
+        "artist": "Sean Kingston",
+        "genre": "Pop",
+        "year": "2009"
+    },
+    {
+        "number": "13",
+        "song": "Fly Me to the Moon",
+        "artist": "Frank Sinatra",
+        "genre": "Classics",
+        "year": "1954"
+    }
+]
