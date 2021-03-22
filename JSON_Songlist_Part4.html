@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>JSON Songlist Part 2</title>
+    <style type="text/css">
+        body,html{font-size: 20px;}
+    </style>
+    <script   src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <form>
+        Select a Genre to filter the songs by: 
+    	<select name="select1" id="select1" size='1'>
+    	    <option value="none"> None </option>
+            <option value="classics"> Classics </option>
+    	    <option value="pop"> Pop </option>
+    	    <option value="rock"> Rock </option>
+        </select>
+        <input type="button" value = "Filter" onclick="filterFunction()">
+	</form>
+    <script language="javascript">
+        function filterFunction()
+            {
+                index = document.getElementById("select1").selectedIndex;
+                var g = document.getElementById("select1").options[index].value;
+                $.get( "https://federico-sorcini.github.io/JSON_SongList/Songlist.json", 
+                function( data2 ) 
+                    {
+                        str2 = JSON.stringify(data2);
+                        strHTML2= "<ul>";
+                        data2.forEach(function(song) 
+                        { 
+                            if (g == song.genre)
+                            {
+                                strHTML2 += "<li>" 
+                                + song.song + "<br>" 
+                                + "Artist: " + song.artist + "<br>"
+                                + "Genre: " + song.genre + "<br>"
+                                + "Year: " + song.year + "<br><br>" + "</li>";
+                            }
+                            else if (g == "None")
+                            {
+                                strHTML2 += "<li>" 
+                                + song.song + "<br>" 
+                                + "Artist: " + song.artist + "<br>"
+                                + "Genre: " + song.genre + "<br>"
+                                + "Year: " + song.year + "<br><br>" + "</li>";
+                            }
+                            else 
+                            {
+                                continue;
+                            }
+                        }) 
+                        strHTML2 += "</ul>";
+                        document.write(strHTML2);
+                    })
+            }
+</script>
+</body>
+</html>
